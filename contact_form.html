@@ -1,0 +1,112 @@
+
+    
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animal Community Contact Form</title>
+    <style>
+      .signup {
+        border:3px solid #999999;
+        font:  normal 14px helvetica;
+        color: #444444;
+        background-color: bisque;
+        width:20%;
+          background-size: cover;
+        
+      }
+        body {
+            background-color: saddlebrown;
+        }
+    </style>
+
+    <script>
+      function validate(form)
+      {
+        fail  = validateFname(form.fname.value)
+        fail += validateLname(form.lname.value)
+        fail += validateUsername(form.username.value)
+        fail += validatePassword(form.password.value)
+        fail += validateAge(form.age.value)
+        fail += validateEmail(form.email.value)
+
+        if   (fail == "")   return true
+        else { alert('Please fill all fields'); return false }
+      }
+
+      function validateFname(field)
+      {
+        return (field == "") ? "No Fname was entered.\n" : ""
+      }
+      
+      function validateLname(field)
+      {
+        return (field == "") ? "No Lname was entered.\n" : ""
+      }
+
+      function validateUsername(field)
+      {
+        if (field == "") return "No Username was entered.\n"
+        else if (field.length < 5)
+          return "Usernames must be at least 5 characters.\n"
+        else if (/[^a-zA-Z0-9_-]/.test(field))
+          return "Only a-z, A-Z, 0-9, - and _ allowed in Usernames.\n"
+        return ""
+      }
+
+      function validatePassword(field)
+      {
+        if (field == "") return "No Password was entered.\n"
+        else if (field.length < 6)
+          return "Passwords must be at least 6 characters.\n"
+        else if (! /[a-z]/.test(field) ||
+                 ! /[A-Z]/.test(field) ||
+                 ! /[0-9]/.test(field))
+          return "Passwords require one each of a-z, A-Z and 0-9.\n"
+        return ""
+      }
+
+      function validateAge(field)
+      {
+        if (isNaN(field)) return "No Age was entered.\\n"
+        else if (field < 18 || field > 110)
+          return "Age must be between 18 and 110.\n"
+        return ""
+      }
+
+      function validateEmail(field)
+      {
+        if (field == "") return "No Email was entered.\n"
+          else if (!((field.indexOf(".") > 0) &&
+                     (field.indexOf("@") > 0)) ||
+                     /[^a-zA-Z0-9.@_-]/.test(field))
+            return "The Email address is invalid.\n"
+        return ""
+      }
+    </script>
+  </head>
+  <div id="form">
+    <body>
+    <table class="signup" border="0" cellpadding="2" cellspacing="5" bgcolor="#eeeeee">
+      <th colspan="2" align="center">Animal Community Contact Form</th>
+      <form method="post" action="adduser.php" onsubmit="return validate(this)">
+        <tr><td>Fname</td>
+          <td><input type="text" maxlength="32" name="fname"></td></tr>
+        <tr><td>Lname</td>
+          <td><input type="text" maxlength="32" name="lname"></td></tr>
+        <tr><td>Username</td>
+          <td><input type="text" maxlength="16" name="username"></td></tr>
+        <tr><td>Password</td>
+          <td><input type="text" maxlength="12" name="password"></td></tr>
+        <tr><td>Age</td>
+          <td><input type="text" maxlength="3"  name="age"></td></tr>
+        <tr><td>Email</td>
+          <td><input type="text" maxlength="64" name="email"></td></tr>
+        <tr><td colspan="2" align="center"><input type="submit" value="Signup"></td></tr>
+      </form>
+    </table>
+  </body>
+</html>
+<p>Thank you so much for taking the time to visit our precious animals. If you would like to learn more about the adoption process, please feel free to complete the form and we would get back to you; also, if you would like to receive or monthly newsletter, by filling out the form you automatically qualify. Thanks again for visiting.</p>
+    
+</body>
+</html>

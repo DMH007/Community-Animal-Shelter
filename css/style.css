@@ -1,0 +1,116 @@
+/*!
+ * Start Bootstrap - Stylish Portfolio (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+
+/*Body*/
+
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 10px 10px;
+}
+
+body {
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: saddlebrown;
+}
+
+
+body {
+     background-color:bisque;
+     text-align: center;
+     font-size: 18px;
+     font-style: oblique;
+}
+
+/*carousel*/
+
+myCarousel {
+    background-position: center;    
+}
+
+#para {
+    text-align: justify;   
+}
+
+h3 {
+    text-align: left;
+    font-size: 20px;
+}
+h2{
+    text-align: center;
+}
+
+
+h4{
+    text-align: center;
+}
+
+this.p{
+    text-align: justify;
+    padding: 5px 5px;
+}
+
+this.p{
+    text-align: center;
+    padding: 5px 5px;
+}
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p.ridge 
+     {border-style:double;
+         font-weight: 700;
+         text-align: justify;       
+}
+
+</style>

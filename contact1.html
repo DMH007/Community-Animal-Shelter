@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta character="utf-8"/>
+    <title>Animal Community Center</title>
+    <script type="text/javascript">
+    
+    function check_info(){
+        var firstname = document.getElementById('firstname').value;
+        var lastname = document.getElementById('lastname').value;
+    }
+    
+        if(firstname=="" || lastname==""){
+            alert('Please fill in all fields');
+            return false;
+        }
+        else{
+            return true;
+        }
+        </script>
+</head>
+<body>
+  <form action="/page.html" method="post" onsubmit= "return check_info();">
+   First name:<br>
+   <input type="text" name="firstname" id="firstname"/>
+   <br>
+   Last name:<br>
+   <input type="text" name="lastname" id="lastname"/>
+   <br><br>
+   <input type="submit"> <br><br> 
+  </form>
+                
+</body>
+</html>
