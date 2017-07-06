@@ -84,7 +84,7 @@ div.desc {
 
 .responsive {
     padding: 0 6px;
-    float: left;
+    float: right;
     width: 24.99999%;
 }
 
@@ -112,5 +112,11 @@ p.ridge
          font-weight: 700;
          text-align: justify;       
 }
+p{
+    text-align: justify;
+}
 
+#this.form{
+    align-content: center;
+}
 </style>
